@@ -1,0 +1,5 @@
+Rascunho:
+     HOME ---> vai exibir todos os produtos
+     Detalhes ---> vai exibir os Detalhes dos produtos
+          ex: --> quanto custa o tenis e qual o conforto dele se ele serve para caminhada ou qualquer outra coisa
+     

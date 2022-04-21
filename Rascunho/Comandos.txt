@@ -1,5 +1,11 @@
-Rascunho:
-     HOME ---> vai exibir todos os produtos
-     Detalhes ---> vai exibir os Detalhes dos produtos
-          ex: --> quanto custa o tenis e qual o conforto dele se ele serve para caminhada ou qualquer outra coisa
+Comandos atalhos: 
+     - rnfunc --> abre uma função pré feita com react native
+     - rfunc --> abre uma função pré feita com react js
+     - 
      
+front-end:
+     Home [x]
+     Details [x]
+
+Back-end e os dados:
+     DataBase: [] --> onde eu vou guardar e listar os dados.

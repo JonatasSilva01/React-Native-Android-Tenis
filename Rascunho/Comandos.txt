@@ -7,5 +7,5 @@ front-end:
      Home [x]
      Details [x]
 
-Back-end e os dados:
-     DataBase: [] --> onde eu vou guardar e listar os dados.
+BACK END AINDA NÃO ESTÁ PRONTO
+TENHO QUE FAZER AS CONFIGURAÇÕES DOS BOTÕES E DOS DADOS EM QUESTÃO

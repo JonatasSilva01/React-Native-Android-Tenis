@@ -34,7 +34,7 @@ const style = StyleSheet.create({
   textTitle: {
     fontSize: 22,
     marginVertical: '2%',
-  },  
+  },
   textList: {
     fontSize: 16,
     lineHeight: 25,
@@ -46,7 +46,19 @@ const style = StyleSheet.create({
   }
 });
 
+const NameAndPrice =
+[
+  {
+    preco: "280,00",
+    nome: "Nike 1",
+    img: require('../../assets/detail.png'),
+    desc: "O brilho perdura no Nike Air Force 1 '07 LV8, o original do basquete que dá um toque renovado naquilo que você conhece bem: sobreposições costuradas, cores vibrantes e o nível certo de estilo do basquete para chamar a atenção. O couro polido acrescenta uma textura fina, enquanto o bolso oculto mantém os seus objetos seguros.",
+    Categoria: "Amortecer seu caminhar e sua corrida nos dias de treino.",
+    Mateiral: "flexivel e duradouro para pessoas que amam esportes.",
+  },
+]
 
+const TamanhosDosTenis = ["40","39","36","31"]
 
 export default function Detail({navigation}){
 
@@ -57,8 +69,8 @@ export default function Detail({navigation}){
 
  return (
    <ScrollView style={style.container}>
-     <Image 
-        source={require('../../assets/detail.png')}
+     <Image
+        source={NameAndPrice[0].img}
         style={style.image}
         resizeMode={"cover"}
       />
@@ -66,19 +78,28 @@ export default function Detail({navigation}){
       <View>
 
         <View>
-          <Text style={[style.title, { fontSize: 24 }]}>R$280,00[valor do produto]</Text>
+          <Text style={[style.title, { fontSize: 24 }]}>R${NameAndPrice[0].preco}</Text>
         </View>
 
         <View style={{opacity: 0.4}}>
-          <Text style={[style.title, { fontSize: 30 }]}>Nome do produto</Text>
+          <Text style={[style.title, { fontSize: 30 }]}>{NameAndPrice[0].nome}</Text>
         </View>
 
         <View style={style.dotContainer}>
-          <Dot color="#2379f4" />         
+          <Dot color="#2379f4" />
           <Dot color="#fb6e53" />
-          <Dot color="#ddd" />         
-          <Dot color="#000" />         
+          <Dot color="#ddd" />
+          <Dot color="#000" />
         </View>
+
+        {/* <View style={{flexDirection: 'row', width: '100%'}}>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              <SizeButton bgColor="#17181a" Color="#FFF">43</SizeButton>
+              <SizeButton>39</SizeButton>
+              <SizeButton>36</SizeButton>
+              <SizeButton>34</SizeButton>
+            </ScrollView>
+        </View> */}
 
         <View style={{flexDirection: 'row', width: '100%'}}>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -86,21 +107,21 @@ export default function Detail({navigation}){
               <SizeButton>39</SizeButton>
               <SizeButton>36</SizeButton>
               <SizeButton>34</SizeButton>
-            </ScrollView> 
+            </ScrollView>
         </View>
 
         <View style={style.textContent}>
           <Text style={style.textTitle}>
-            Nike Force 90 fortHart
+            {NameAndPrice[0].nome}
           </Text>
           <Text style={style.textContent}>
-            O brilho perdura no Nike Air Force 1 '07 LV8, o original do basquete que dá um toque renovado naquilo que você conhece bem: sobreposições costuradas, cores vibrantes e o nível certo de estilo do basquete para chamar a atenção. O couro polido acrescenta uma textura fina, enquanto o bolso oculto mantém os seus objetos seguros.
+            {NameAndPrice[0].desc}
           </Text>
           <Text style={style.textList}>
-            - Categoria: Amortecer seu caminhar e sua corrida nos dias de treino.
+            {NameAndPrice[0].Categoria}
           </Text>
           <Text style={style.textList}>
-            - Mateiral: flexivel e duradouro para pessoas que amam esportes.
+            {NameAndPrice[0].Mateiral}
           </Text>
         </View>
 

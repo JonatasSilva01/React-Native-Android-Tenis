@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const style = StyleSheet.create({
     container: {
@@ -22,8 +22,8 @@ const style = StyleSheet.create({
 
 export default function SizeButton(props) {
  return (
-   <View style={[style.container, {backgroundColor: props.bgColor || '#FFF'}]}>
+   <TouchableOpacity style={[style.container, {backgroundColor: props.bgColor || '#FFF'}]}>
     <Text style={[style.text, {color: props.color || '#ddd'}]}>{props.children}</Text>
-   </View>
+   </TouchableOpacity>
   );
 }

@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'rea
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native'
 import Tenis from '../../components/Tenis';
-import Dados from '../../components/Dados';
 
 const estilos = StyleSheet.create({
   container: {
@@ -35,6 +34,35 @@ const estilos = StyleSheet.create({
   },
 });
 
+const screenAndText = 
+[
+  {
+    nome: "Nike 1",
+    img: require('../../assets/1.png'),
+  },
+  {
+    nome: "Nike 2",
+    img: require('../../assets/2.png'),
+  },
+  {
+    nome: "Nike 3",
+    img: require('../../assets/3.png'),
+  },
+  {
+    nome: "Nike 4",
+    img: require('../../assets/4.png'),
+  },
+  {
+    nome: "Nike 5",
+    img: require('../../assets/5.png'),
+  },
+  {
+    nome: "Nike 6",
+    img: require('../../assets/6.png'),
+  },
+]
+
+
 export default function Home() {
 
   const navigation = useNavigation();
@@ -64,29 +92,29 @@ export default function Home() {
         <ScrollView>
           <Text style={estilos.text}>LANÇAMENTOS</Text>
           <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-            <Tenis img={require('../../assets/1.png')} cost="R$140" onClick={() => navigation.navigate('Detail')}>
-              Nike nell blace do canada
+            <Tenis img={screenAndText[0].img} cost="R$140" onClick={() => navigation.navigate('Detail')}>
+              {screenAndText[0].nome}
             </Tenis>
-            <Tenis img={require('../../assets/2.png')} cost="R$1880" onClick={() => navigation.navigate('Detail')}>
-              Nike air max 90
-            </Tenis>
-          </View>
-
-          <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-            <Tenis img={require('../../assets/3.png')} cost="R$99,80" onClick={() => navigation.navigate('Detail')}>
-             Adidas new year
-            </Tenis>
-            <Tenis img={require('../../assets/4.png')} cost="R$130,00" onClick={() => navigation.navigate('Detail')}>
-              Adidas workout
+            <Tenis img={screenAndText[1].img} cost="R$1880" onClick={() => navigation.navigate('Detail')}>
+              {screenAndText[1].nome}
             </Tenis>
           </View>
 
           <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-            <Tenis img={require('../../assets/5.png')} cost="R$150,00" onClick={() => navigation.navigate('Detail')}>
-              Adidas new blace for autiti
+            <Tenis img={screenAndText[2].img} cost="R$99,80" onClick={() => navigation.navigate('Detail')}>
+             {screenAndText[2].nome}
             </Tenis>
-            <Tenis img={require('../../assets/6.png')} cost="R$80" onClick={() => navigation.navigate('Detail')}>
-              Adidas for new friands
+            <Tenis img={screenAndText[3].img} cost="R$130,00" onClick={() => navigation.navigate('Detail')}>
+              {screenAndText[3].nome}
+            </Tenis>
+          </View>
+
+          <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+            <Tenis img={screenAndText[4].img} cost="R$150,00" onClick={() => navigation.navigate('Detail')}>
+              {screenAndText[4].nome}
+            </Tenis>
+            <Tenis img={screenAndText[5].img} cost="R$80" onClick={() => navigation.navigate('Detail')}>
+              {screenAndText[5].nome}
             </Tenis>
           </View>
 

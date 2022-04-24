@@ -15,6 +15,22 @@ const style = StyleSheet.create({
     },
 });
 
+    const NomeTenis = 
+    [
+      {
+        nome: "Nike1",
+      },
+      {
+        nome: "Nike2",
+      },
+      {
+        nome: "Nike3",
+      },
+      {
+        nome: "Nike4",
+      },
+    ]
+
 
 export default function Footer() {
  return (
@@ -24,22 +40,22 @@ export default function Footer() {
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <View style={style.M_tenis}>
             <Tenis img={require('../../assets/1.png')} cost="110,00" >
-              Nike air force 90 max man
+              {NomeTenis[0].nome}
             </Tenis>
           </View>
           <View style={style.M_tenis}>
             <Tenis img={require('../../assets/5.png')} cost="110,00" >
-              Nike air force 90 max man
+              {NomeTenis[1].nome}
             </Tenis>
           </View>
           <View style={style.M_tenis}>
             <Tenis img={require('../../assets/3.png')} cost="110,00" >
-              Nike air force 90 max man
+              {NomeTenis[2].nome}
             </Tenis>
           </View>
           <View style={style.M_tenis}>
             <Tenis img={require('../../assets/6.png')} cost="110,00" >
-              Nike air force 90 max man
+              {NomeTenis[3].nome}
             </Tenis>
           </View>
         </ScrollView>

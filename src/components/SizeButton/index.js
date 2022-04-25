@@ -27,3 +27,12 @@ export default function SizeButton(props) {
    </TouchableOpacity>
   );
 }
+
+{/*
+    Nesse arquivo eu fiz um botão dos tamanhos disponiveis de Tenis para escolher. A funcionalidade desse
+    arquivo tem como objetivo de pegar a propriedade passada para o SizeButton para estilizar esse botão
+    eu tive que fazer a propriedade "bgColor" e passar a referencia de uma cor qualquer a que eu peguei foi
+    um "preto". um exemplo
+                "props"
+     <SizeButton bgColor="#17181a">
+*/}

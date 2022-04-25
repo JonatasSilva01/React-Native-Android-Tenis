@@ -13,15 +13,10 @@ export default function App() {
   let [fontsLoaded] = useFonts({
     Anton_400Regular,
   });
-
-
-
+  
   if(!fontsLoaded){
     return <AppLoading />
   }
-
-
-
   return (
     <>
       <StatusBar style="light" backgroundColor='#000' translucent={true}/>
@@ -29,3 +24,9 @@ export default function App() {
     </>
   );
 }
+
+{/*
+  Falar do import expo-AppLoading
+  Falar dos root
+  Status bar traslucent
+*/}

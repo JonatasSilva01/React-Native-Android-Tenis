@@ -63,3 +63,13 @@ export default function Footer() {
    </View>
   );
 }
+
+{/*
+    Nesse aquivo eu aprendi a fazer um ScrollView Horizontal para trazer uma lista de Tenis e Reaproveitando
+    Código da pasta Tenis. para fazer esse scroll Horizontal tive que colocar dentro do componente do react native
+    "ScrollView" uma propriedade que já vem com ele que é chamada de "horizontal".
+
+    E ainda nesse arquivo apendi a ocutar a barra de Scroll da lista, a  propriedade que ja vem com ele é
+    chamada "showsHorizontalScrollIndicator={}" que se voce colocar "false" ele esconde a barra de scroll
+    do seu projeto.
+*/}

@@ -1,16 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-export default function Button() {
- return (
-   <View style={style.container}>
-       <TouchableOpacity style={style.btnContainer}>
-            <Text style={style.title}>COMPRAR</Text>
-       </TouchableOpacity>
-   </View>
-  );
-}
-
 const style = StyleSheet.create({
     container: {
         alignItems: 'center',
@@ -30,3 +20,21 @@ const style = StyleSheet.create({
         color: '#FFF',
     },
 });
+
+
+export default function Button(props) {
+ return (
+   <View style={style.container}>
+       <TouchableOpacity style={style.btnContainer} onPress={props.onClick}>
+            <Text style={style.title}>COMPRAR</Text>
+       </TouchableOpacity>
+   </View>
+  );
+}
+
+{/*
+    Nesse arquivo eu fiz um botão de compra na hora que o usuario apertar esse botão ele vai acionar
+    a referencia da Propriedade do componente "onClick" e vai retornar uma menssagem de "comprou".
+
+    Esse botão vem do react native chamado TouchableOpacity.
+*/}

@@ -126,3 +126,10 @@ export default function Home() {
      </View>
   );
 }
+
+{
+  /*
+    Escreva o que a HOME representa nessa tela.
+    fala tbm do root que ele fala sobre rotas.
+  */
+}

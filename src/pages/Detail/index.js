@@ -92,15 +92,6 @@ export default function Detail({navigation}){
           <Dot color="#000" />
         </View>
 
-        {/* <View style={{flexDirection: 'row', width: '100%'}}>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-              <SizeButton bgColor="#17181a" Color="#FFF">43</SizeButton>
-              <SizeButton>39</SizeButton>
-              <SizeButton>36</SizeButton>
-              <SizeButton>34</SizeButton>
-            </ScrollView>
-        </View> */}
-
         <View style={{flexDirection: 'row', width: '100%'}}>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <SizeButton bgColor="#17181a" Color="#FFF">43</SizeButton>
@@ -108,6 +99,11 @@ export default function Detail({navigation}){
               <SizeButton>36</SizeButton>
               <SizeButton>34</SizeButton>
             </ScrollView>
+            {/*
+              para eu aplicar o estiolo de auto clicavel passando o estilo de uma propriedade para a outra
+              sendo que eu tenha que desativar o estilo da anterior, assim eu possa fazer uma condição de 
+              if e else para aplicar essa regra de estilização.
+            */}
         </View>
 
         <View style={style.textContent}>
@@ -125,7 +121,7 @@ export default function Detail({navigation}){
           </Text>
         </View>
 
-       <Button />
+       <Button onClick={() => alert('Comprou!')} />
 
         <View style={style.line} />
 
@@ -135,3 +131,22 @@ export default function Detail({navigation}){
    </ScrollView>
   );
 }
+
+{/*
+  Esse arquivo é a pagina de Detalhes dos produto é aonde que o usuario vai visualisar o "produto" com mais
+  tranquilidade, e escolher as opições de cores e tamanho,e tbm é onde que vai ler a descrição desse "produto".
+  Dentro desse arquivo é onde vai alocar todas as funcionalidades que o aplicativo vai conter como botões e
+  Lista.
+*/}
+ {
+   /*
+      Eu não fiz cada pagina para cada tipo de tenis porque acho que vou precisar de mais tempo para fazer o
+      back end e pensar em uma forma de utilizar alguma funcionalidade semelhante que quando eu aperto em um
+      botão de cada tenis eu mude a referencia das props do componente Tenis e de Detail mudando a imamgem,
+      Titulo, descrição e preço, porque assim eu deixo meu código muito limpo e favoravel a minha aplicação,
+      e aprendendo tbm a reaproveitar código. 
+   */
+ }
+ {
+   // Fazer a SIMULADO DE 2 PONTOS DE MATEMATICA E PORTUGUÊS
+ }

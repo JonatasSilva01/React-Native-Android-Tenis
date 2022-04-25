@@ -10,6 +10,7 @@ export default function Dados() {
     },
   ];
 
+  {/* esse aquivo eu utilizei para testes. Não tem nada a ver com o projeto */}
   function NomesDosTenis(){
     return (
       <View>

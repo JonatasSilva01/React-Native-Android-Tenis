@@ -121,7 +121,7 @@ export default function Detail({navigation}){
           </Text>
         </View>
 
-       <Button onClick={() => alert('Comprou!')} />
+       <Button clicou={() => alert('Comprou!')} />
 
         <View style={style.line} />
 

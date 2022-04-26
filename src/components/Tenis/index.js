@@ -23,7 +23,7 @@ export default function Tenis(props) {
           return desc
       }
 
-      return `${desc.substring(0, 22)}...`
+      return `${desc.substring(0, 15)}...`
   }
 
  return (

@@ -19,15 +19,19 @@ const style = StyleSheet.create({
     [
       {
         nome: "Nike1",
+        preco: "110,00",
       },
       {
         nome: "Nike2",
+        preco: "110,00",
       },
       {
         nome: "Nike3",
+        preco: "110,00",
       },
       {
         nome: "Nike4",
+        preco: "110,00",
       },
     ]
 
@@ -39,22 +43,22 @@ export default function Footer() {
       <View style={{flexDirection: 'row'}}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <View style={style.M_tenis}>
-            <Tenis img={require('../../assets/1.png')} cost="110,00" >
+            <Tenis img={require('../../assets/1.png')} cost={NomeTenis[0].preco} >
               {NomeTenis[0].nome}
             </Tenis>
           </View>
           <View style={style.M_tenis}>
-            <Tenis img={require('../../assets/5.png')} cost="110,00" >
+            <Tenis img={require('../../assets/5.png')} cost={NomeTenis[1].preco} >
               {NomeTenis[1].nome}
             </Tenis>
           </View>
           <View style={style.M_tenis}>
-            <Tenis img={require('../../assets/3.png')} cost="110,00" >
+            <Tenis img={require('../../assets/3.png')} cost={NomeTenis[2].preco} >
               {NomeTenis[2].nome}
             </Tenis>
           </View>
           <View style={style.M_tenis}>
-            <Tenis img={require('../../assets/6.png')} cost="110,00" >
+            <Tenis img={require('../../assets/6.png')} cost={NomeTenis[3].preco} >
               {NomeTenis[3].nome}
             </Tenis>
           </View>

@@ -25,7 +25,7 @@ const style = StyleSheet.create({
 export default function Button(props) {
  return (
    <View style={style.container}>
-       <TouchableOpacity style={style.btnContainer} onPress={props.onClick}>
+       <TouchableOpacity style={style.btnContainer} onPress={props.clicou}>
             <Text style={style.title}>COMPRAR</Text>
        </TouchableOpacity>
    </View>

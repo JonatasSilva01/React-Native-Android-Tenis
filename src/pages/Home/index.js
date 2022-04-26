@@ -37,7 +37,7 @@ const estilos = StyleSheet.create({
 const screenAndText = 
 [
   {
-    nome: "Nike 1",
+    nome: "ASDJASJDNASLKDNLASNDALSNDLKASNDLAKSNDLKASNDALKSNDALSKNFLANFELLASNA",
     img: require('../../assets/1.png'),
   },
   {
@@ -129,7 +129,10 @@ export default function Home() {
 
 {
   /*
-    Escreva o que a HOME representa nessa tela.
+    A pagina home tem como objetivo de rederizar as imgens e os tituilos.
+    A funcionalidade principal da Home é na hora de clicar no botão touchopacity
+
+
     fala tbm do root que ele fala sobre rotas.
   */
 }

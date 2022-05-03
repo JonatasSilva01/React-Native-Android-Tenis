@@ -41,7 +41,7 @@ export default function Home() {
 
   const navigation = useNavigation();
   const LISTADETENIS = LISTSHOES.map((item) => (
-    <Tenis img={item.img} cost={item.preco} onClick={() => navigation.navigate('Detail')}>{item.titulo}</Tenis>    
+    <Tenis key={item.key} img={item.img} cost={item.preco} onClick={() => navigation.navigate('Detail')}>{item.titulo}</Tenis>    
   ))
 
  return (

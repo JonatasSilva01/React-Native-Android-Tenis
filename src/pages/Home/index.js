@@ -4,6 +4,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native'
 import Tenis from '../../components/Tenis';
 
+const LISTSHOES = require('../../mock/Dados')
+
 const estilos = StyleSheet.create({
   container: {
     flex: 1,
@@ -34,38 +36,13 @@ const estilos = StyleSheet.create({
   },
 });
 
-const screenAndText = 
-[
-  {
-    nome: "ASDJASJDNASLKDNLASNDALSNDLKASNDLAKSNDLKASNDALKSNDALSKNFLANFELLASNA",
-    img: require('../../assets/1.png'),
-  },
-  {
-    nome: "Nike 2",
-    img: require('../../assets/2.png'),
-  },
-  {
-    nome: "Nike 3",
-    img: require('../../assets/3.png'),
-  },
-  {
-    nome: "Nike 4",
-    img: require('../../assets/4.png'),
-  },
-  {
-    nome: "Nike 5",
-    img: require('../../assets/5.png'),
-  },
-  {
-    nome: "Nike 6",
-    img: require('../../assets/6.png'),
-  },
-]
-
 
 export default function Home() {
 
   const navigation = useNavigation();
+  const LISTADETENIS = LISTSHOES.map((item) => (
+    <Tenis img={item.img} cost={item.preco} onClick={() => navigation.navigate('Detail')}>{item.titulo}</Tenis>    
+  ))
 
  return (
    <View style={estilos.container}>
@@ -91,48 +68,9 @@ export default function Home() {
         <View style={estilos.line}/>
         <ScrollView>
           <Text style={estilos.text}>LANÇAMENTOS</Text>
-          <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-            <Tenis img={screenAndText[0].img} cost="R$140" onClick={() => navigation.navigate('Detail')}>
-              {screenAndText[0].nome}
-            </Tenis>
-            <Tenis img={screenAndText[1].img} cost="R$1880" onClick={() => navigation.navigate('Detail')}>
-              {screenAndText[1].nome}
-            </Tenis>
-          </View>
-
-          <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-            <Tenis img={screenAndText[2].img} cost="R$99,80" onClick={() => navigation.navigate('Detail')}>
-             {screenAndText[2].nome}
-            </Tenis>
-            <Tenis img={screenAndText[3].img} cost="R$130,00" onClick={() => navigation.navigate('Detail')}>
-              {screenAndText[3].nome}
-            </Tenis>
-          </View>
-
-          <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-            <Tenis img={screenAndText[4].img} cost="R$150,00" onClick={() => navigation.navigate('Detail')}>
-              {screenAndText[4].nome}
-            </Tenis>
-            <Tenis img={screenAndText[5].img} cost="R$80" onClick={() => navigation.navigate('Detail')}>
-              {screenAndText[5].nome}
-            </Tenis>
-          </View>
-
+          {LISTADETENIS}
         </ScrollView>
       </View>
-
-        
-
      </View>
   );
-}
-
-{
-  /*
-    A pagina home tem como objetivo de rederizar as imgens e os tituilos.
-    A funcionalidade principal da Home é na hora de clicar no botão touchopacity
-
-
-    fala tbm do root que ele fala sobre rotas.
-  */
 }

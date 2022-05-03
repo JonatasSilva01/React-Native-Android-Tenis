@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
 
 import Dot from '../../components/Dot';
 import SizeButton from '../../components/SizeButton';
 import Button from '../../components/Button';
 import Footer from '../../components/Footer';
+
+const LISTSHOES = require('../../mock/Dados');
 
 const style = StyleSheet.create({
   container: {
@@ -46,31 +48,16 @@ const style = StyleSheet.create({
   }
 });
 
-const NameAndPrice =
-[
-  {
-    preco: "280,00",
-    nome: "Nike 1",
-    img: require('../../assets/detail.png'),
-    desc: "O brilho perdura no Nike Air Force 1 '07 LV8, o original do basquete que dá um toque renovado naquilo que você conhece bem: sobreposições costuradas, cores vibrantes e o nível certo de estilo do basquete para chamar a atenção. O couro polido acrescenta uma textura fina, enquanto o bolso oculto mantém os seus objetos seguros.",
-    Categoria: "Amortecer seu caminhar e sua corrida nos dias de treino.",
-    Mateiral: "flexivel e duradouro para pessoas que amam esportes.",
-  },
-]
-
-const TamanhosDosTenis = ["40","39","36","31"]
-
 export default function Detail({navigation}){
 
   navigation.setOptions({
-    headerTitle: 'Compras',
+    headerTitle: 'Detalhes do Produto',
   });
-
 
  return (
    <ScrollView style={style.container}>
      <Image
-        source={NameAndPrice[0].img}
+        source={require('../../assets/detail.png')}
         style={style.image}
         resizeMode={"cover"}
       />
@@ -78,11 +65,11 @@ export default function Detail({navigation}){
       <View>
 
         <View>
-          <Text style={[style.title, { fontSize: 24 }]}>R${NameAndPrice[0].preco}</Text>
+          <Text style={[style.title, { fontSize: 24 }]}>R${LISTSHOES[0].preco}</Text>
         </View>
 
         <View style={{opacity: 0.4}}>
-          <Text style={[style.title, { fontSize: 30 }]}>{NameAndPrice[0].nome}</Text>
+          <Text style={[style.title, { fontSize: 30 }]}>{LISTSHOES[0].titulo}</Text>
         </View>
 
         <View style={style.dotContainer}>
@@ -99,29 +86,24 @@ export default function Detail({navigation}){
               <SizeButton>36</SizeButton>
               <SizeButton>34</SizeButton>
             </ScrollView>
-            {/*
-              para eu aplicar o estiolo de auto clicavel passando o estilo de uma propriedade para a outra
-              sendo que eu tenha que desativar o estilo da anterior, assim eu possa fazer uma condição de 
-              if e else para aplicar essa regra de estilização.
-            */}
         </View>
 
         <View style={style.textContent}>
           <Text style={style.textTitle}>
-            {NameAndPrice[0].nome}
+            {LISTSHOES[0].titulo}
           </Text>
           <Text style={style.textContent}>
-            {NameAndPrice[0].desc}
+            {LISTSHOES[0].desc}
           </Text>
           <Text style={style.textList}>
-            {NameAndPrice[0].Categoria}
+            {LISTSHOES[0].category}
           </Text>
           <Text style={style.textList}>
-            {NameAndPrice[0].Mateiral}
+            {LISTSHOES[0].material}
           </Text>
         </View>
 
-       <Button clicou={() => alert('Comprou!')} />
+       <Button onClick={() => alert('Comprou!')} />
 
         <View style={style.line} />
 
@@ -131,22 +113,3 @@ export default function Detail({navigation}){
    </ScrollView>
   );
 }
-
-{/*
-  Esse arquivo é a pagina de Detalhes dos produto é aonde que o usuario vai visualisar o "produto" com mais
-  tranquilidade, e escolher as opições de cores e tamanho,e tbm é onde que vai ler a descrição desse "produto".
-  Dentro desse arquivo é onde vai alocar todas as funcionalidades que o aplicativo vai conter como botões e
-  Lista.
-*/}
- {
-   /*
-      Eu não fiz cada pagina para cada tipo de tenis porque acho que vou precisar de mais tempo para fazer o
-      back end e pensar em uma forma de utilizar alguma funcionalidade semelhante que quando eu aperto em um
-      botão de cada tenis eu mude a referencia das props do componente Tenis e de Detail mudando a imamgem,
-      Titulo, descrição e preço, porque assim eu deixo meu código muito limpo e favoravel a minha aplicação,
-      e aprendendo tbm a reaproveitar código. 
-   */
- }
- {
-   // Fazer a SIMULADO DE 2 PONTOS DE MATEMATICA E PORTUGUÊS
- }
